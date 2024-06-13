@@ -9,4 +9,10 @@ Base = declarative_base()
 
 
 def init_db():
-    Base.metadata.create_all(bind=engine)
+    import models
+    print("Initialisation de la base de données...")
+    try:
+        Base.metadata.create_all(bind=engine)
+        print("Tables créées avec succès.")
+    except exc.SQLAlchemyError as e:
+        print("Erreur lors de la création des tables :", e)
