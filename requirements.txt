@@ -1,0 +1,5 @@
+flask
+graphene
+flask-graphql
+flask-jwt-extended
+sqlalchemy
