@@ -1,7 +1,9 @@
 from flask import Flask, request, jsonify
 from flask_jwt_extended import JWTManager, create_access_token
+from flask_graphql import GraphQLView
 from database import init_db
 from config import Config
+from schema import schema
 
 app = Flask(__name__)
 app.config.from_object(Config)
@@ -23,6 +25,16 @@ def login():
 
     access_token = create_access_token(identity={"username": USER_DATA['username']})
     return jsonify(access_token=access_token), 200
+
+
+app.add_url_rule(
+    '/graphql',
+    view_func=GraphQLView.as_view(
+        'graphql',
+        schema=schema,
+        graphiql=True
+    )
+)
 
 
 if __name__ == '__main__':
