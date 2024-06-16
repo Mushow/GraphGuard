@@ -85,9 +85,9 @@ GraphGuard is a deliberately vulnerable GraphQL API for managing user profiles. 
 
 ## Demonstrated Vulnerabilities
 
-1. **SQL Injection**: Demonstrate how poorly constructed queries can lead to SQL injection.
+1. **Excessive Data Exposure**: Highlight how improper schema design can expose sensitive data.
 2. **Broken Authentication**: Show how weak authentication mechanisms can be bypassed.
-3. **Excessive Data Exposure**: Highlight how improper schema design can expose sensitive data.
+3. **SQL Injection**: Demonstrate how poorly constructed queries can lead to SQL injection.
 4. **Inadequate Logging and Monitoring**: Demonstrate the lack of proper logging and monitoring.
 
 ## Security Measures

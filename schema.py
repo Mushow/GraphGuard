@@ -7,6 +7,8 @@ from database import SessionLocal
 class User(SQLAlchemyObjectType):
     class Meta:
         model = UserModel
+        # Expose only the id and username fields to avoid exposing sensitive data
+        only_fields = ('id', 'username')
 
 
 class Query(graphene.ObjectType):
