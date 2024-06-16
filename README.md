@@ -59,14 +59,8 @@ GraphGuard is a deliberately vulnerable GraphQL API for managing user profiles. 
   ```graphql
   query {
     allUsers {
-      edges {
-        node {
-          id
-          username
-          email
-          fullName
-        }
-      }
+       id
+       username
     }
   }
   ```
